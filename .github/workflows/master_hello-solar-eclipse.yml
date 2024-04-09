@@ -2,7 +2,7 @@
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 # More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
 
-name: Build and deploy Python app to Azure Web App - Hello-solar-eclipse
+name: Build and deploy Python app to Azure Web App - hello-solar-eclipse
 
 on:
   push:
@@ -65,14 +65,14 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_5F3428CBEFBB480CB0A3A98DA9C6A817 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_5BDAC84F7AD1448EB375AF69AA964DC5 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_5CF80CCE5ECC47439056811174FE787F }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_BFA94F876A5B42F493DFFD27035E4EFC }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_61AD10CBC0C4499BBB816697F5E4DE79 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_ED0ECF5CB69A491C9EDCB3F9D7333052 }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
         with:
-          app-name: 'Hello-solar-eclipse'
+          app-name: 'hello-solar-eclipse'
           slot-name: 'Production'
           
